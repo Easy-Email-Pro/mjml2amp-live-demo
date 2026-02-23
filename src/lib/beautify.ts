@@ -21,18 +21,22 @@ function getLineIndent(str: string, beforeIndex: number): string {
  * If text follows '>' of an opening tag, put content on a new line with same indent and align closing tag.
  */
 function ensureContentOnNewLine(html: string): string {
-  // 1. Same line: ">text</xxx>" → ">\n{indent}  text\n{indent}</xxx>"
-  let out = html.replace(/>(\s*)([^\s<][^<]*)(<\/[^>]+>)/g, (_, spaces, content, closing, offset, fullString) => {
-    if (!content.trim()) return `>${spaces}`;
-    const indent = getLineIndent(fullString, offset);
-    return `>\n${indent}  ${content.trim()}\n${indent}${closing}`;
-  });
-  // 2. Text only, no closing on same line: ">text" → ">\n{indent}  text"
-  out = out.replace(/>(\s*)([^\s<][^\n<]+)(?!\s*<\/)/g, (_, spaces, content, offset, fullString) => {
-    if (!content.trim()) return `>${spaces}`;
-    const indent = getLineIndent(fullString, offset);
-    return `>\n${indent}  ${content.trim()}`;
-  });
+  let out = html.replace(
+    />(\s*)([^\s<][^<]*)(<\/[^>]+>)/g,
+    (_, spaces, content, closing, offset, fullString) => {
+      if (!content.trim()) return `>${spaces}`;
+      const indent = getLineIndent(fullString, offset);
+      return `>\n${indent}  ${content.trim()}\n${indent}${closing}`;
+    }
+  );
+  out = out.replace(
+    />(\s*)([^\s<][^\n<]+)(?!\s*<\/)/g,
+    (_, spaces, content, offset, fullString) => {
+      if (!content.trim()) return `>${spaces}`;
+      const indent = getLineIndent(fullString, offset);
+      return `>\n${indent}  ${content.trim()}`;
+    }
+  );
   return out;
 }
 

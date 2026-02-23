@@ -14,6 +14,9 @@ importers:
       '@monaco-editor/react':
         specifier: ^4.7.0
         version: 4.7.0(monaco-editor@0.55.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      easy-email-pro-core:
+        specifier: ^1.57.4
+        version: 1.57.4(@swc/core@1.15.11)(@types/node@24.10.13)(axios@1.13.5)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(zod@4.3.6)
       js-beautify:
         specifier: ^1.15.4
         version: 1.15.4
@@ -21,8 +24,8 @@ importers:
         specifier: ^4.18.0
         version: 4.18.0
       mjml2amp:
-        specifier: ^1.0.0
-        version: 1.0.0(@swc/core@1.15.11)(@types/node@24.10.13)(axios@1.13.5)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(zod@4.3.6)
+        specifier: ^1.0.2
+        version: 1.0.2(@swc/core@1.15.11)(@types/node@24.10.13)(axios@1.13.5)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(zod@4.3.6)
       react:
         specifier: ^19.2.0
         version: 19.2.4
@@ -37,7 +40,7 @@ importers:
         specifier: ^1.14.3
         version: 1.14.3
       '@types/node':
-        specifier: ^24.10.1
+        specifier: ^24.10.13
         version: 24.10.13
       '@types/react':
         specifier: ^19.2.7
@@ -48,6 +51,9 @@ importers:
       '@vitejs/plugin-react-swc':
         specifier: ^4.2.2
         version: 4.2.3(vite@8.0.0-beta.14(@types/node@24.10.13))
+      dotenv:
+        specifier: ^17.3.1
+        version: 17.3.1
       eslint:
         specifier: ^9.39.1
         version: 9.39.2
@@ -840,6 +846,10 @@ packages:
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
+  dotenv@17.3.1:
+    resolution: {integrity: sha512-IO8C/dzEb6O3F9/twg6ZLXz164a2fhTnEWb95H23Dm4OuN+92NmEAlTrupP9VW6Jm3sO26tQlqyvyi4CsnY9GA==}
+    engines: {node: '>=12'}
+
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
@@ -1534,8 +1544,8 @@ packages:
   mjml-wrapper@4.18.0:
     resolution: {integrity: sha512-TZeOvLjIhXEK60rjWNiYhEYNlv5GKYahE+96ifcT5OGkWkRA0DsQDfp+6VI32OS5VxsfKq2h/UdERPlQijjpAQ==}
 
-  mjml2amp@1.0.0:
-    resolution: {integrity: sha512-EO/hQ74HjvedgO3ycxBTKjW2BYwH5sYnGqX/kRaqYqUJQgRyk4Nswiqa6DgRBf7BEJ1pabbMcRtZB7pbD3+sEw==}
+  mjml2amp@1.0.2:
+    resolution: {integrity: sha512-ht1fzmqvs04JAWL8CG94UvYQduybaDz4F7lN/Mp7re4oGLcjATGkxGab9adY9eHToFrFjufNXxLxKFJ5OYteUQ==}
     hasBin: true
 
   mjml@4.18.0:
@@ -2846,6 +2856,8 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
+  dotenv@17.3.1: {}
+
   dunder-proto@1.0.1:
     dependencies:
       call-bind-apply-helpers: 1.0.2
@@ -3728,7 +3740,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  mjml2amp@1.0.0(@swc/core@1.15.11)(@types/node@24.10.13)(axios@1.13.5)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(zod@4.3.6):
+  mjml2amp@1.0.2(@swc/core@1.15.11)(@types/node@24.10.13)(axios@1.13.5)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(zod@4.3.6):
     dependencies:
       easy-email-pro-core: 1.57.4(@swc/core@1.15.11)(@types/node@24.10.13)(axios@1.13.5)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(zod@4.3.6)
       lodash-es: 4.17.23

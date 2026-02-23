@@ -6,9 +6,9 @@
  */
 import type { Monaco } from '@monaco-editor/react';
 import type { editor, languages } from 'monaco-editor';
-import { tagAttributes, cssProperties, htmlTags } from './snippets';
-import { languageConfiguration } from './snippets/languageConfiguration';
-import mjmlSnippetsJson from './snippets/mjml.json';
+import { tagAttributes, cssProperties, htmlTags } from '../snippets';
+import { languageConfiguration } from '../snippets/languageConfiguration';
+import mjmlSnippetsJson from '../snippets/mjml.json';
 
 type MjmlSnippetDef = { prefix: string; body: string | string[]; description?: string };
 
@@ -128,7 +128,7 @@ export function registerMjmlPlugin(monaco: Monaco): () => void {
   }
 
   monaco.languages.register({ id: langId, extensions: ['.mjml'], aliases: ['MJML'] });
-  monaco.languages.setMonarchTokensProvider(langId, MJML_MONARCH as any);
+  monaco.languages.setMonarchTokensProvider(langId, MJML_MONARCH as languages.IMonarchLanguage);
 
   const darkColors: Record<string, string> = {
     'editor.foreground': '#D4D4D4',

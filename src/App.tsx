@@ -1,4 +1,4 @@
-import { MjmlEditor } from './MjmlEditor'
+import { MjmlEditor } from './features/MjmlEditor'
 import './App.css'
 
 function App() {
