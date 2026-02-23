@@ -1,0 +1,41 @@
+<mjml>
+  <mj-head>
+    <mj-raw>
+
+      <script async
+              custom-element="amp-carousel"
+              src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    </mj-raw>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-text>
+   
+            <amp-carousel width="400"
+                          height="300"
+                          layout="responsive"
+                          type="slides"
+                          role="region"
+                          aria-label="Image carousel">
+              <amp-img src="https://amp.dev/static/samples/img/image1.jpg"
+                       width="400"
+                       height="300"
+                       layout="responsive"
+                       alt="Sample image 1"></amp-img>
+              <amp-img src="https://amp.dev/static/samples/img/image2.jpg"
+                       width="400"
+                       height="300"
+                       layout="responsive"
+                       alt="Sample image 2"></amp-img>
+              <amp-img src="https://amp.dev/static/samples/img/image3.jpg"
+                       width="400"
+                       height="300"
+                       layout="responsive"
+                       alt="Sample image 3"></amp-img>
+            </amp-carousel>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

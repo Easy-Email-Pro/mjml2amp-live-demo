@@ -1,0 +1,71 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      .amp-form-demo label { display: block; margin: 12px 0 4px; font-weight: 600; color: #333; }
+      .amp-form-demo input[type="text"],
+      .amp-form-demo input[type="email"],
+      .amp-form-demo textarea { width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+      .amp-form-demo input[type="submit"] { margin-top: 16px; padding: 10px 24px; background: #4a90e2; color: #fff; border: none; border-radius: 4px; font-size: 14px; cursor: pointer; }
+      .amp-form-demo [submit-success], .amp-form-demo [submit-error] { margin-top: 12px; padding: 8px 12px; border-radius: 4px; font-size: 14px; }
+      .amp-form-demo [submit-success] { background: #e6f4ea; color: #1e8e3e; }
+      .amp-form-demo [submit-error] { background: #fce8e6; color: #c5221f; }
+    </mj-style>
+    <mj-raw>
+      <script async
+              custom-element="amp-form"
+              src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+      <script async
+              custom-template="amp-mustache"
+              src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    </mj-raw>
+  </mj-head>
+  <mj-body>
+    <mj-section background-color="#f5f5f5" padding="24px 0">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#333" align="center" padding-bottom="16px">
+          AMP Form Example
+        </mj-text>
+        <mj-text>
+            <form method="post"
+            novalidate
+                  action-xhr="https://admin.easyemail.pro/api/form"
+                  class="amp-form-demo">
+              <label for="name">Name</label>
+              <input type="text"
+                     id="name"
+                     name="name"
+                     placeholder="Enter your name"
+                     required>
+
+              <label for="email">Email</label>
+              <input type="email"
+                     id="email"
+                     name="email"
+                     placeholder="your@email.com"
+                     required>
+
+              <label for="message">Message</label>
+              <textarea name="message"
+                        id="message"
+                        placeholder="Enter your message"
+                        rows="4"></textarea>
+
+              <input type="submit"
+                     value="Submit">
+
+              <div submit-success>
+                <template type="amp-mustache">
+                  Success! {{message}}
+                </template>
+              </div>
+              <div submit-error>
+                <template type="amp-mustache">
+                  Error: {{message}}
+                </template>
+              </div>
+            </form>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

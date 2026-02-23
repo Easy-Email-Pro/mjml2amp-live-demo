@@ -1,0 +1,81 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      .accordion-title { font-size: 22px; font-weight: 700; color: #0f172a; margin: 0 0 20px 0; letter-spacing: -0.02em; }
+      amp-accordion { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
+      amp-accordion section { border: none; border-bottom: 1px solid #e2e8f0; margin: 0; }
+      amp-accordion section:last-child { border-bottom: none; }
+      amp-accordion .accordion-header { background: #f8fafc; padding: 16px 20px; margin: 0; font-size: 15px; font-weight: 600; color: #0f172a; cursor: pointer; border: none; }
+      amp-accordion section[expanded] .accordion-header { background: #f1f5f9; color: #0369a1; }
+      amp-accordion .accordion-content { padding: 20px; background: #fff; }
+      amp-accordion .accordion-content p { margin: 0 0 12px 0; color: #475569; }
+      amp-accordion .accordion-content p:last-child { margin-bottom: 0; }
+      amp-accordion .accordion-content div { margin: 0; color: #475569; }
+      amp-accordion figure { margin: 0; }
+      amp-accordion amp-img { border-radius: 8px; overflow: hidden; }
+    </mj-style>
+    <mj-raw>
+     
+      <script async
+              custom-element="amp-accordion"
+              src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    </mj-raw>
+  </mj-head>
+  <mj-body>
+    <mj-section background-color="#f8fafc" padding="32px 24px 16px">
+      <mj-column>
+        <mj-text css-class="accordion-title" padding="0 0 8px 0">
+          Frequently asked questions
+        </mj-text>
+        <mj-text padding="0 0 24px 0" color="#64748b" font-size="14px">
+          Expand each section to read more.
+        </mj-text>
+        <mj-text>
+   
+            <amp-accordion expand-single-section>
+              <section>
+                <h4 class="accordion-header">Getting started</h4>
+                <div class="accordion-content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <h4 class="accordion-header">Features &amp; tips</h4>
+                <div class="accordion-content">
+                  <div>
+                    Interdum et malesuada fames ac ante ipsum primis in
+                    faucibus. Integer placerat dapibus sem. Duis rutrum tristique
+                    quam, et pulvinar urna. Praesent eget quam dui. Vivamus
+                    egestas posuere lorem, ut tempus magna aliquam et. Nulla eu
+                    sagittis mauris. Aliquam tincidunt id turpis sit amet
+                    consectetur.
+                  </div>
+                </div>
+              </section>
+              <section>
+                <h4 class="accordion-header">Gallery</h4>
+                <div class="accordion-content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur.
+                  </p>
+                </div>
+              </section>
+            </amp-accordion>
+
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
